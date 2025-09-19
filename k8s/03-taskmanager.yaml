@@ -18,7 +18,7 @@ spec: # Desired state specification
   selector: # How to find Pods managed by this Deployment
     matchLabels: # Pods must have these labels
       app: taskmanager
-  template: # Template for creating new Pods
+  template: # Template for creating new Podds
     metadata: # Labels applied to each Pod
       labels:
         app: taskmanager # Must match selector above
