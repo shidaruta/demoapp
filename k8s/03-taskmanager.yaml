@@ -27,7 +27,7 @@ spec: # Desired state specification
       containers: # Containers in each Pod
         - name: taskmanager # Container name
           # Docker image from your CI/CD pipeline (update with your DockerHub username)
-          image: usersid/task-manager:c11ec2c63385b6396291062c28563e3785f072c9
+          image: usersid/task-manager:ca9c39e9986ca664e15cdfa1ecd08f8795aad328
           ports: # Ports exposed by container
             - containerPort: 8000 # Port the Flask app listens on
               name: http # Named port for Service reference
@@ -58,3 +58,8 @@ spec: # Service specification
       name: http # Name for this port mapping
   type: ClusterIP # Service type - accessible only within cluster
   # Change to LoadBalancer for external access
+
+  template:
+    spec:
+      containers:
+        - image: usersid/task-manager:c11ec2c63385b6396291062c28563e3785f072c9
