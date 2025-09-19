@@ -18,8 +18,3 @@ spec: # Service specification
       name: http # Name for this port mapping
   type: ClusterIP # Service type - accessible only within cluster
   # Change to LoadBalancer for external access
-
-  template:
-    spec:
-      containers:
-        - image: usersid/task-manager:c11ec2c63385b6396291062c28563e3785f072c9
